@@ -1,0 +1,18 @@
+Sequence = "ATTAGC"
+G = 0
+A = 0
+T = 0
+C = 0
+for i in Sequence:
+ if i == "G":
+  G = G + 1
+ if i == "A":
+  A = A + 1
+ if i == "T":
+  T = T + 1
+ if i == "C":
+  C = C + 1
+print "number of G:",G
+print "number of A:",A
+print "number of T:",T
+print "number of C:",C
