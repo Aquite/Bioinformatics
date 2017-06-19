@@ -1,10 +1,11 @@
 import sys
-Sequence = "GGGCCCAAATTT"
+Sequence = "GGGAAACCCTTT"
 n = 0
 c = 0
 for i in Sequence:
  n = n + 1
  c = c + 1
  if n == 2:
-  print Sequence[c-2],; sys.stdout.softspace=False;print Sequence[c-1],; sys.stdout.softspace=False;print Sequence[c]
+  acid = Sequence[c-2:c+1]
+  print acid
   n = -1
