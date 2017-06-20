@@ -1,0 +1,9 @@
+import sys
+n = 0
+c = 0
+for i in Sequence:
+ n = n + 1
+ c = c + 1
+ if n == 2:
+  print Sequence[c-2],; sys.stdout.softspace=False;print Sequence[c-1],; sys.stdout.softspace=False;print Sequence[c]
+  n = -1

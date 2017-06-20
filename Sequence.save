@@ -1,0 +1,25 @@
+Sequence = "ATTAGC"
+G = 0
+A = 0
+T = 0
+C = 0
+Total = 0
+import sys
+for i in Sequence:
+ Total = Total + 1
+ if i == "G":
+  G = G + 1
+ if i == "A":
+  A = A + 1
+ if i == "T":
+  T = T + 1
+ if i == "C":
+  C = C + 1
+pG = float(G) * 100 /Total
+pA = float(A) * 100 / Total
+pT = float(T) * 100 / Total
+pC = float(C) * 100 / Total
+print "number of G:",; sys.stdout.softspace=False;G,pG,; sys.stdout.softspace=False; print "%"
+print "number of A:",; sys.stdout.softspace=False;A,pA,; sys.stdout.softspace=False; print "%"
+print "number of T:",; sys.stdout.softspace=False;T,pT,; sys.stdout.softspace=False; print "%"
+print "number of C:",C,pC,;; sys.stdout.softspace=False; sys.stdout.softspace=False; print "%"

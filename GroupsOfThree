@@ -1,11 +1,84 @@
-import sys
-Sequence = "GGGAAACCCTTT"
+file = open("/share/data/mystery-seq","r")
+Sequence = file.readline()
 n = 0
 c = 0
+Q = []
+AA = {}
+AA["TTT"] = "F"
+AA["TTC"] = "F"
+AA["TTA"] = "F"
+AA["TTG"] = "F"
+AA["CTT"] = "L"
+AA["CTC"] = "L"
+AA["CTA"] = "L"
+AA["CTG"] = "L"
+AA["ATT"] = "I"
+AA["ATC"] = "I"
+AA["ATA"] = "I"
+AA["ATG"] = "M"
+AA["GTT"] = "V"
+AA["GTC"] = "V"
+AA["GTA"] = "V"
+AA["GTG"] = "V"
+AA["TCT"] = "S"
+AA["TCC"] = "S"
+AA["TCA"] = "S"
+AA["TCG"] = "S"
+AA["CCT"] = "P"
+AA["CCC"] = "P"
+AA["CCA"] = "P"
+AA["CCG"] = "P"
+AA["ACT"] = "T"
+AA["ACC"] = "T"
+AA["ACA"] = "T"
+AA["ACG"] = "T"
+AA["GCT"] = "A"
+AA["GCC"] = "A"
+AA["GCA"] = "A"
+AA["GCG"] = "A"
+AA["TAT"] = "Y"
+AA["TAC"] = "Y"
+AA["TAA"] = "(Stop Codon)"
+AA["TAG"] = "(Stop Codon)"
+AA["CAT"] = "H"
+AA["CAC"] = "H"
+AA["CAA"] = "Q"
+AA["CAG"] = "Q"
+AA["AAT"] = "N"
+AA["AAC"] = "N"
+AA["AAA"] = "K"
+AA["AAG"] = "K"
+AA["GAT"] = "D"
+AA["GAC"] = "D"
+AA["GAA"] = "E"
+AA["GAG"] = "E"
+AA["TGT"] = "C"
+AA["TGC"] = "C"
+AA["TGA"] = "(Stop Codon)"
+AA["TGG"] = "W"
+AA["CGT"] = "R"
+AA["CGC"] = "R"
+AA["CGA"] = "R"
+AA["CGG"] = "R"
+AA["AGT"] = "S"
+AA["AGC"] = "S"
+AA["AGA"] = "R"
+AA["AGG"] = "R"
+AA["GGT"] = "G"
+AA["GGC"] = "G"
+AA["GGA"] = "G"
+AA["GGG"] = "G"
 for i in Sequence:
  n = n + 1
  c = c + 1
  if n == 2:
   acid = Sequence[c-2:c+1]
-  print acid
+  for j in AA:
+   if acid == j:
+    Q.append(AA[j])
   n = -1
+for coolio in Q:
+ if coolio != "(Stop Codon)":
+  print coolio,
+ else:
+  print coolio
