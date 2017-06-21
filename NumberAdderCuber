@@ -1,0 +1,16 @@
+N = [5,10,15,20,50]
+i = 0
+Cubed = 0
+j = 0
+Added = 0
+
+for j in N:
+ for i in range(j+1):
+  d = i
+  Cubed = Cubed + d*d*d
+  Added = Added + d
+# if Cubed != Added*Added:
+ print j, Added, Cubed
+ Cubed = 0
+ i = 0
+ Added = 0

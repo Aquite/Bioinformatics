@@ -1,0 +1,24 @@
+file  = open ("/share/data/loginfo","r")
+UserWords = file.readlines()
+Usernames = {}
+
+counter = -1
+
+for i in UserWords:
+ counter = counter + 1
+ words = i.split()
+ Usernames[words[0]] = words[1]
+
+U = raw_input("username: ")
+
+UC = U in Usernames.keys()
+
+if UC == True:
+ print "Correct username"
+ P = raw_input("password: ")
+ if Usernames[U] == P:
+  print "Correct password"; print "Welcome!"
+ else:
+  print "Incorrect password"
+elif UC == False:
+ print "Unknown username"

@@ -1,0 +1,21 @@
+U = raw_input("username: ")
+counter = -1
+uncounter = -1
+
+Usernames = ["pavel.batalov", "mickey"]
+Passwords = ["pavel", "meow"]
+
+for i in Usernames:
+ counter = counter + 1
+ if U == i:
+  print "valid username"
+  P = raw_input("password: ")
+  if P == Passwords[counter]:
+   print "valid password"
+   print "Welcome!"
+  else:
+   print "incorrect password"
+ else:
+  uncounter = uncounter + 1
+if uncounter == counter:
+ print "invalid username"

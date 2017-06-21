@@ -1,0 +1,151 @@
+file  = open ("2muscleout.aln","r")
+x = file.readlines()
+aYeast = x[2:12]
+aPlant = x[14:24]
+aFish = x[26:36]
+aHuman = x[38:48]
+aChicken = x[50:60]
+aMonkey = x[62:72]
+Yeast = ""
+Plant = ""
+Fish = ""
+Human = ""
+Chicken = ""
+Monkey = ""
+
+for i in aYeast:
+ Yeast = Yeast + i
+for i in aPlant:
+ Plant = Plant + i
+for i in aFish:
+ Fish = Fish + i
+for i in aHuman:
+ Human = Human + i
+for i in aChicken:
+ Chicken = Chicken + i
+for i in aMonkey:
+ Monkey = Monkey + i
+
+n = -1
+dif = 0
+
+for i in Yeast:
+ n = n + 1
+ if i != Plant[n]:
+  dif = dif + 1
+print "Yeast Plant differences:",dif
+n = -1
+dif = 0
+
+for i in Yeast:
+ n = n + 1
+ if i != Fish[n]:
+  dif = dif + 1
+print "Yeast Fish differences:",dif
+n = -1
+dif = 0
+
+for i in Yeast:
+ n = n + 1
+ if i != Human[n]:
+  dif = dif + 1
+print "Yeast Human diferences:",dif
+n = -1
+dif = 0
+
+for i in Yeast:
+ n = n + 1
+ if i != Chicken[n]:
+  dif = dif + 1
+print "Yeast Chicken diferences:",dif
+n = -1
+dif = 0
+
+for i in Yeast:
+ n = n + 1
+ if i != Monkey[n]:
+  dif = dif + 1
+print "Yeast Monkey differences:",dif
+n = -1
+dif = 0
+
+for i in Plant:
+ n = n + 1
+ if i != Fish[n]:
+  dif = dif + 1
+print "Plant Fish diferences:",dif
+n = -1
+dif = 0
+
+for i in Plant:
+ n = n + 1
+ if i != Human[n]:
+  dif = dif + 1
+print "Plant Human diferences:",dif
+n = -1
+dif = 0
+
+for i in Plant:
+ n = n + 1
+ if i != Chicken[n]:
+  dif = dif + 1
+print "Plant Chicken diferences:",dif
+n = -1
+dif = 0
+
+for i in Plant:
+ n = n + 1
+ if i != Monkey[n]:
+  dif = dif + 1
+print "Plant Monkey differences:",dif
+n = -1
+dif = 0
+
+for i in Fish:
+ n = n + 1
+ if i != Human[n]:
+  dif = dif + 1
+print "Fish Human diferences:",dif
+n = -1
+dif = 0
+
+for i in Fish:
+ n = n + 1
+ if i != Chicken[n]:
+  dif = dif + 1
+print "Fish Chicken diferences:",dif
+n = -1
+dif = 0
+
+for i in Fish:
+ n = n + 1
+ if i != Monkey[n]:
+  dif = dif + 1
+print "Fish Monkey differences:",dif
+n = -1
+dif = 0
+
+for i in Human:
+ n = n + 1
+ if i != Chicken[n]:
+  dif = dif + 1
+print "Human Chicken diferences:",dif
+n = -1
+dif = 0
+
+for i in Human:
+ n = n + 1
+ if i != Monkey[n]:
+  dif = dif + 1
+print "Human Monkey differences:",dif
+n = -1
+dif = 0
+
+
+for i in Chicken:
+ n = n + 1
+ if i != Monkey[n]:
+  dif = dif + 1
+print "Chicken Monkey differences:",dif
+n = -1
+dif = 0

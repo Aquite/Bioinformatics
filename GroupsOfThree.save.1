@@ -1,8 +1,11 @@
-file = open("/share/data/mystery-seq2","r")
-Sequence = file.readline()
+27 28 29 30
+
+import sys
+Sequence = "ATGAAATCAAAG"
 n = 0
 c = 0
-Q = []
+Q = 0
+Z = 0
 AA = {}
 AA["TTT"] = "F"
 AA["TTC"] = "F"
@@ -38,8 +41,8 @@ AA["GCA"] = "A"
 AA["GCG"] = "A"
 AA["TAT"] = "Y"
 AA["TAC"] = "Y"
-AA["TAA"] = "(Stop Codon)"
-AA["TAG"] = "(Stop Codon)"
+AA["TAA"] = "Stop Codon"
+AA["TAG"] = "Stop Codon"
 AA["CAT"] = "H"
 AA["CAC"] = "H"
 AA["CAA"] = "Q"
@@ -54,7 +57,7 @@ AA["GAA"] = "E"
 AA["GAG"] = "E"
 AA["TGT"] = "C"
 AA["TGC"] = "C"
-AA["TGA"] = "(Stop Codon)"
+AA["TGA"] = "Stop Codon"
 AA["TGG"] = "W"
 AA["CGT"] = "R"
 AA["CGC"] = "R"
@@ -72,13 +75,10 @@ for i in Sequence:
  n = n + 1
  c = c + 1
  if n == 2:
+  z = z + 1
   acid = Sequence[c-2:c+1]
   for j in AA:
    if acid == j:
-    Q.append(AA[j])
+    Q[z] =  AA[j]
   n = -1
-for coolio in Q:
- if coolio != "(Stop Codon)":
-  print coolio,
- else:
-  print coolio
+print Q

@@ -1,0 +1,3 @@
+file  = open ("muscleout.aln","r")
+x = file.readlines(1)
+print x

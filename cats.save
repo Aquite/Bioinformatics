@@ -1,0 +1,8 @@
+N = 4
+i = 0
+C = 0
+
+for i in range(N+1):
+ d = i
+ C = C + d*d*d
+print C
