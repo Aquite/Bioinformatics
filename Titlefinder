@@ -1,2 +1,15 @@
-file = open("WebPage","r")
+file = open("webpage.aln","r")
 list = file.readlines()
+import re
+string = ""
+
+for i in list:
+ string = string + i
+
+cats = re.search("\<title\>.*\<\/title\>", string)
+
+string = cats.group()
+
+string = re.sub("\<\W*title\>","", string)
+
+print string
