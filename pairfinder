@@ -1,0 +1,74 @@
+file = open("listopairs.aln","r")
+Sequence = file.readlines()
+betterlist = ""
+truelist = []
+cats = ""
+counter = -1
+inp = raw_input("size of groups: ")
+pNum = int(inp)
+
+G = 0
+A = 0
+T = 0
+C = 0
+Total = 0
+import sys
+
+for i in Sequence:
+ counter = counter + 1
+ if Sequence[counter][0] != ">":
+  betterlist = betterlist + i
+
+pCount = 0
+pLine = -1
+
+print betterlist
+
+for i in betterlist:
+ pCount = pCount + 1
+ pLine = pLine + 1
+ if pCount == pNum:
+  for j in range(pNum):
+   cats = cats + betterlist[pLine-((pNum-1)-j)]
+  truelist.append(cats)
+  cats = ""
+  pCount = 0
+
+numcount = 0
+for i in truelist:
+ numcount = numcount + 1
+paircounter = 0
+
+for i in range(numcount):
+ if len(truelist) != 0:
+  pair = truelist[0]
+  paircounter = 0
+  for j in truelist:
+   if j == pair:
+    paircounter = paircounter + 1
+  print pair,":",paircounter
+  for k in range(paircounter):
+   truelist.remove(pair)
+
+
+for i in betterlist:
+ if i == "G":
+  G = G + 1
+  Total = Total + 1
+ if i == "A":
+  A = A + 1
+  Total = Total + 1
+ if i == "T":
+  T = T + 1
+  Total = Total + 1
+ if i == "C":
+  C = C + 1
+  Total = Total + 1
+#pG = float(G) * 100 / Total
+#pA = float(A) * 100 / Total
+#pT = float(T) * 100 / Total
+#pC = float(C) * 100 / Total
+#print "number of G:",G,; sys.stdout.softspace=False;print ",",pG,; sys.stdout.softspace=False; print "%"
+#print "number of A:",A,; sys.stdout.softspace=False;print ",",pA,; sys.stdout.softspace=False; print "%"
+#print "number of T:",T,; sys.stdout.softspace=False;print ",",pT,; sys.stdout.softspace=False; print "%"
+#print "number of C:",C,; sys.stdout.softspace=False;print ",",pC,; sys.stdout.softspace=False; print "%"
