@@ -1,151 +1,58 @@
 file  = open ("2muscleout.aln","r")
 x = file.readlines()
-aYeast = x[2:12]
-aPlant = x[14:24]
-aFish = x[26:36]
-aHuman = x[38:48]
-aChicken = x[50:60]
-aMonkey = x[62:72]
-Yeast = ""
-Plant = ""
-Fish = ""
-Human = ""
-Chicken = ""
-Monkey = ""
+species = []
+new = ""
+meme = ""
+counter = 0
+specounter = -1
+n = -1
+lettercount = -1
+dif = 0
 
-for i in aYeast:
- Yeast = Yeast + i
-for i in aPlant:
- Plant = Plant + i
-for i in aFish:
- Fish = Fish + i
-for i in aHuman:
- Human = Human + i
-for i in aChicken:
- Chicken = Chicken + i
-for i in aMonkey:
- Monkey = Monkey + i
+for i in x:
+ if counter != 0:
+  meme = meme + i
+ counter = counter + 1
+ if counter == 12:
+  species.append(meme)
+  counter = 0
+  meme = ""
+
+for i in species:
+ specounter = specounter + 1
+tempspe = specounter
+
+for i in species[0]:
+ lettercount = lettercount + 1
+
+for i in range(0,specounter+1):
+  for j in species[i]:
+   while tempspe != i:
+    while n != lettercount:
+     n = n + 1
+     if j != species[tempspe][n]:
+      dif = dif + 1
+    print "Differences between",i,tempspe,":",dif
+    dif = 0
+    n = -1
+    tempspe = tempspe - 1
+   tempspe = specounter
+
+#for i in species:
+# for j in species[i]: 
+#  new = new + j
+# species[i] = new
+# new = ""
+
+print specounter
 
 n = -1
 dif = 0
 
-for i in Yeast:
- n = n + 1
- if i != Plant[n]:
-  dif = dif + 1
-print "Yeast Plant differences:",dif
-n = -1
-dif = 0
-
-for i in Yeast:
- n = n + 1
- if i != Fish[n]:
-  dif = dif + 1
-print "Yeast Fish differences:",dif
-n = -1
-dif = 0
-
-for i in Yeast:
- n = n + 1
- if i != Human[n]:
-  dif = dif + 1
-print "Yeast Human diferences:",dif
-n = -1
-dif = 0
-
-for i in Yeast:
- n = n + 1
- if i != Chicken[n]:
-  dif = dif + 1
-print "Yeast Chicken diferences:",dif
-n = -1
-dif = 0
-
-for i in Yeast:
- n = n + 1
- if i != Monkey[n]:
-  dif = dif + 1
-print "Yeast Monkey differences:",dif
-n = -1
-dif = 0
-
-for i in Plant:
- n = n + 1
- if i != Fish[n]:
-  dif = dif + 1
-print "Plant Fish diferences:",dif
-n = -1
-dif = 0
-
-for i in Plant:
- n = n + 1
- if i != Human[n]:
-  dif = dif + 1
-print "Plant Human diferences:",dif
-n = -1
-dif = 0
-
-for i in Plant:
- n = n + 1
- if i != Chicken[n]:
-  dif = dif + 1
-print "Plant Chicken diferences:",dif
-n = -1
-dif = 0
-
-for i in Plant:
- n = n + 1
- if i != Monkey[n]:
-  dif = dif + 1
-print "Plant Monkey differences:",dif
-n = -1
-dif = 0
-
-for i in Fish:
- n = n + 1
- if i != Human[n]:
-  dif = dif + 1
-print "Fish Human diferences:",dif
-n = -1
-dif = 0
-
-for i in Fish:
- n = n + 1
- if i != Chicken[n]:
-  dif = dif + 1
-print "Fish Chicken diferences:",dif
-n = -1
-dif = 0
-
-for i in Fish:
- n = n + 1
- if i != Monkey[n]:
-  dif = dif + 1
-print "Fish Monkey differences:",dif
-n = -1
-dif = 0
-
-for i in Human:
- n = n + 1
- if i != Chicken[n]:
-  dif = dif + 1
-print "Human Chicken diferences:",dif
-n = -1
-dif = 0
-
-for i in Human:
- n = n + 1
- if i != Monkey[n]:
-  dif = dif + 1
-print "Human Monkey differences:",dif
-n = -1
-dif = 0
-
-
-for i in Chicken:
- n = n + 1
- if i != Monkey[n]:
-  dif = dif + 1
-print "Chicken Monkey differences:",dif
-n = -1
-dif = 0
+#for i in Yeast:
+# n = n + 1
+# if i != Plant[n]:
+#  dif = dif + 1
+#print "Yeast Plant differences:",dif
+#n = -1
+#dif = 0

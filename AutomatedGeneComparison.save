@@ -1,0 +1,47 @@
+file  = open ("2muscleout.aln","r")
+x = file.readlines()
+counter = 0
+lines = 0
+species = []
+for i in x:
+ counter = counter + 1
+ if x[i][0] = ">"
+  newspecie = x[i-counter:i]
+  species.append(newspecie)
+  counter = 0
+
+counter = -1
+for i in species:
+ counter = counter + 1
+
+for i in species[0]:
+ lines = lines + 1
+
+for i in range(counter):
+ for j in range(lines):
+  
+#aYeast = x[2:12]
+#aPlant = x[14:24]
+#aFish = x[26:36]
+#aHuman = x[38:48]
+#aChicken = x[50:60]
+#aMonkey = x[62:72]
+#Yeast = ""
+#Plant = ""
+#Fish = ""
+#Human = ""
+#Chicken = ""
+#Monkey = ""
+
+#for i in aYeast:
+# Yeast = Yeast + i
+#n = -1
+#dif = 0
+
+#for i in Yeast:
+# n = n + 1
+# if i != Plant[n]:
+#  dif = dif + 1
+#print "Yeast Plant differences:",dif
+#n = -1
+#dif = 0

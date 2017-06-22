@@ -1,0 +1,203 @@
+file  = open ("rhodopsinlist.aln","r")
+x = file.readlines()
+aFish = x[2:7]
+aDolphin = x[9:14]
+aElephant = x[16:21]
+aSheep = x[23:28]
+aHuman = x[30:35]
+aDog = x[37:42]
+aWhale = x[44:49]
+Fish = ""
+Dolphin = ""
+Elephant = ""
+Sheep = ""
+Human = ""
+Dog = ""
+Whale = ""
+
+for i in aFish:
+ Fish = Fish + i
+for i in aDolphin:
+ Dolphin = Dolphin + i
+for i in aElephant:
+ Elephant = Elephant + i
+for i in aHuman:
+ Human = Human + i
+for i in aSheep:
+ Sheep = Sheep + i
+for i in aDog:
+ Dog = Dog + i
+for i in aWhale:
+ Whale = Whale + i
+
+n = -1
+dif = 0
+
+for i in Fish:
+ n = n + 1
+ if i != Dolphin[n]:
+  dif = dif + 1
+print "Fish Dolphin differences:",dif
+n = -1
+dif = 0
+
+for i in Fish:
+ n = n + 1
+ if i != Elephant[n]:
+  dif = dif + 1
+print "Fish Elephant differences:",dif
+n = -1
+dif = 0
+
+for i in Fish:
+ n = n + 1
+ if i != Human[n]:
+  dif = dif + 1
+print "Fish Human diferences:",dif
+n = -1
+dif = 0
+
+for i in Fish:
+ n = n + 1
+ if i != Sheep[n]:
+  dif = dif + 1
+print "Fish Sheep diferences:",dif
+n = -1
+dif = 0
+
+for i in Fish:
+ n = n + 1
+ if i != Dog[n]:
+  dif = dif + 1
+print "Fish dog differences:",dif
+n = -1
+dif = 0
+
+for i in Fish:
+ n = n + 1
+ if i != Whale[n]:
+  dif = dif + 1
+print "Fish Whale differences:",dif
+n = -1
+dif = 0
+
+for i in Dolphin:
+ n = n + 1
+ if i != Elephant[n]:
+  dif = dif + 1
+print "Dolphin Elephant diferences:",dif
+n = -1
+dif = 0
+
+for i in Dolphin:
+ n = n + 1
+ if i != Human[n]:
+  dif = dif + 1
+print "Dolphin Human diferences:",dif
+n = -1
+dif = 0
+
+for i in Dolphin:
+ n = n + 1
+ if i != Sheep[n]:
+  dif = dif + 1
+print "Dolphin Sheep diferences:",dif
+n = -1
+dif = 0
+
+for i in Dolphin:
+ n = n + 1
+ if i != Dog[n]:
+  dif = dif + 1
+print "Dolphin Dog differences:",dif
+n = -1
+dif = 0
+
+for i in Dolphin:
+ n = n + 1
+ if i != Whale[n]:
+  dif = dif + 1
+print "Dolphin Whale differences:",dif
+n = -1
+dif = 0
+
+for i in Elephant:
+ n = n + 1
+ if i != Human[n]:
+  dif = dif + 1
+print "Elehpant Human diferences:",dif
+n = -1
+dif = 0
+
+for i in Elephant:
+ n = n + 1
+ if i != Sheep[n]:
+  dif = dif + 1
+print "Elephant Sheep diferences:",dif
+n = -1
+dif = 0
+
+for i in Elephant:
+ n = n + 1
+ if i != Dog[n]:
+  dif = dif + 1
+print "Elephant Dog differences:",dif
+n = -1
+dif = 0
+
+for i in Elephant:
+ n = n + 1
+ if i != Whale[n]:
+  dif = dif + 1
+print "Elephant Whale differences:",dif
+n = -1
+dif = 0
+
+for i in Human:
+ n = n + 1
+ if i != Sheep[n]:
+  dif = dif + 1
+print "Human Sheep diferences:",dif
+n = -1
+dif = 0
+
+for i in Human:
+ n = n + 1
+ if i != Dog[n]:
+  dif = dif + 1
+print "Human Dog differences:",dif
+n = -1
+dif = 0
+
+for i in Human:
+ n = n + 1
+ if i != Whale[n]:
+  dif = dif + 1
+print "Human Whale differences:",dif
+n = -1
+dif = 0
+
+for i in Sheep:
+ n = n + 1
+ if i != Dog[n]:
+  dif = dif + 1
+print "Sheep Dog differences:",dif
+n = -1
+dif = 0
+
+for i in Sheep:
+ n = n + 1
+ if i != Whale[n]:
+  dif = dif + 1
+print "Sheep Whale differences:",dif
+n = -1
+dif = 0
+
+for i in Dog:
+ n = n + 1
+ if i != Whale[n]:
+  dif = dif + 1
+print "Dog Whale differences:",dif
+n = -1
+dif = 0
+
