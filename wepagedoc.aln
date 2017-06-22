@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Spagett!</title>
+<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+ <img src="images/top.png" class="top"><br>
+ <div class="mid">
+  <div class="m1">
+
+
+</div>
+  <div class="m3">
+
+
+
+</div>
+  <div class="m2">
+
+   <iframe width="420" height="315" src="//www.youtube.com/embed/uyh3C1xDT3Y" frameborder="0" allowfullscreen></iframe>
+<br><br>
+<center><img src="spagett.gif"></center>
+  </div>
+ </div>
+ <img src="images/bottom.png" class="bottom">
+<font face="arial" size="2"><p>Spagett is property of Adult Swim, we take no credit in creating the content.<br>© Copyright 2008 Scrambled Media All Rights Reserved.<br>
+<font size="4"><a href="http://www.makeadare.com" title="dare" style="text-decoration:none">Dare</a></font>
+</p>
+</body
+</html>

@@ -1,0 +1,6 @@
+import re
+sentence = "If I got to 123 Devon Lane Rm 1229" 
+
+
+fixed = re.sub("\d","",sentence)
+print fixed

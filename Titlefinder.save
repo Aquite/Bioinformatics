@@ -1,0 +1,3 @@
+file = open("textdoc.aln","r")
+list = file.readlines()
+

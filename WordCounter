@@ -1,10 +1,14 @@
-text = "Betty Botter had some butter but she said this butter's bitter if I bake this bitter butter it would make my batter bitter but a bit of better butter that would make my batter better so she bought a bit of butter better than her bitter butter and she baked it in her batter and the batter was not bitter so 'twas better Betty Botter bought a bit of better butter"
+file = open("textdoc.aln","r")
+list = file.readlines()
+text = ""
 
-punctuation = ["," , "." , ":"]
+for i in list:
+ text = text + i
 
-for i in punctuation:
- text2 = text.replace(i, "")
- text = text2
+
+import re
+
+text = re.sub("[.,:\"\-]","",text)
 
 text2 = text.upper()
 text = text2
