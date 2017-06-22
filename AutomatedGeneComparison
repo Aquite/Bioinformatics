@@ -1,19 +1,27 @@
 file  = open ("2muscleout.aln","r")
 x = file.readlines()
 species = []
-new = ""
 meme = ""
 counter = 0
+linecounter = -1
+carcount = 0
 specounter = -1
-n = -1
 lettercount = -1
+n = -1
 dif = 0
+
+for i in x:
+ linecounter = linecounter +1
+ if x[linecounter][0] == ">":
+  carcount = carcount + 1
+ if carcount == 2:
+  break
 
 for i in x:
  if counter != 0:
   meme = meme + i
  counter = counter + 1
- if counter == 12:
+ if counter == linecounter:
   species.append(meme)
   counter = 0
   meme = ""
@@ -26,33 +34,14 @@ for i in species[0]:
  lettercount = lettercount + 1
 
 for i in range(0,specounter+1):
-  for j in species[i]:
-   while tempspe != i:
-    while n != lettercount:
-     n = n + 1
-     if j != species[tempspe][n]:
-      dif = dif + 1
-    print "Differences between",i,tempspe,":",dif
-    dif = 0
-    n = -1
-    tempspe = tempspe - 1
-   tempspe = specounter
+ while tempspe != i:
+  while n != lettercount:
+   if species[i][n] != species[tempspe][n]:
+    dif = dif + 1
+   n = n + 1
+  print "Differences between",i,"and",tempspe,"are:",dif
+  dif = 0
+  n = -1
+  tempspe = tempspe - 1
+ tempspe = specounter
 
-#for i in species:
-# for j in species[i]: 
-#  new = new + j
-# species[i] = new
-# new = ""
-
-print specounter
-
-n = -1
-dif = 0
-
-#for i in Yeast:
-# n = n + 1
-# if i != Plant[n]:
-#  dif = dif + 1
-#print "Yeast Plant differences:",dif
-#n = -1
-#dif = 0

@@ -1,0 +1,26 @@
+text = "A man, a plan, a canal: panama."
+
+punctuation = [",",".",":"]
+
+for i in punctuation:
+ text2 = text.replace(i, "")
+ text = text2
+
+text2 = text.upper()
+text = text2
+
+cats = text.split()
+wordcounter = 0
+
+for i in cats:
+ numword = numword + 1
+
+for i in range(numword)
+ word = catsnanon[0]
+ wordcounter = 0
+ for j in cats:
+  if j == word:
+   wordcounter = wordcounter + 1
+ print word,":",wordcounter
+ for k in range(wordcounter):
+  cats.remove(word)

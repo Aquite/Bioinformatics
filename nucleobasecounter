@@ -1,21 +1,34 @@
-Sequence = "ATTAGC"
+file = open("/../share/data/Ecoli-genome/MG1655-K12.fasta","r")
+Sequence = file.readlines()
+betterlist = ""
+counter = -1
+
 G = 0
 A = 0
 T = 0
 C = 0
 Total = 0
 import sys
+
 for i in Sequence:
- Total = Total + 1
+ counter = counter + 1
+ if Sequence[counter][0] != ">":
+  betterlist = betterlist + i
+
+for i in betterlist:
  if i == "G":
   G = G + 1
+  Total = Total + 1
  if i == "A":
   A = A + 1
+  Total = Total + 1
  if i == "T":
   T = T + 1
+  Total = Total + 1
  if i == "C":
   C = C + 1
-pG = float(G) * 100 /Total
+  Total = Total + 1
+pG = float(G) * 100 / Total
 pA = float(A) * 100 / Total
 pT = float(T) * 100 / Total
 pC = float(C) * 100 / Total
