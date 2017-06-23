@@ -1,4 +1,4 @@
-Sequence = "ATTAGC"
+Sequence = "GG"
 G = 0
 A = 0
 T = 0
@@ -22,4 +22,4 @@ pC = float(C) * 100 / Total
 print "number of G:",; sys.stdout.softspace=False;G,pG,; sys.stdout.softspace=False; print "%"
 print "number of A:",; sys.stdout.softspace=False;A,pA,; sys.stdout.softspace=False; print "%"
 print "number of T:",; sys.stdout.softspace=False;T,pT,; sys.stdout.softspace=False; print "%"
-print "number of C:",C,pC,;; sys.stdout.softspace=False; sys.stdout.softspace=False; print "%"
+print "number of C:",; sys.stdout.softspace=False;C,pC,; sys.stdout.softspace=False; print "%"

@@ -1,0 +1,16 @@
+file = open("datasheet.aln","r")
+Sequence = file.readlines()
+betterlist = ""
+counter = -1
+
+
+import re
+
+for i in Sequence:
+ counter = counter + 1
+ if Sequence[counter][0] != ">":
+  betterlist = betterlist + i
+
+k = re.sub("T","U",betterlist)
+
+print k

@@ -1,0 +1,22 @@
+import re
+file = open("catdoc.aln","r")
+Sequence = file.readline()
+backwards = ""
+letterlist = []
+counter = -1
+
+Sequence = Sequence.upper()
+
+for i in Sequence:
+ backwards =  i + backwards
+
+sdrawkcab = re.sub("G","Q",backwards)
+sdrawkcab = re.sub("C","G",sdrawkcab)
+sdrawkcab = re.sub("Q","C",sdrawkcab)
+sdrawkcab = re.sub("T","Q",sdrawkcab)
+sdrawkcab = re.sub("A","T",sdrawkcab)
+sdrawkcab = re.sub("Q","A",sdrawkcab)
+
+
+
+print sdrawkcab
