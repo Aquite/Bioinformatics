@@ -12,4 +12,4 @@ string = cats.group()
 
 string = re.sub("\<\W*title\>","", string)
 
-print string
+print "Title:",string

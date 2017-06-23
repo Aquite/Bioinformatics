@@ -1,0 +1,55 @@
+file = open("/share/data/puzzle.txt","r")
+list = file.readlines()
+text = ""
+inp = raw_input("Size of matches: ")
+Size = int(inp)
+
+
+
+for i in list:
+ text = text + i
+
+kcount = 0
+
+import re
+
+text = re.sub("[.,:\"\-]","",text)
+
+text2 = text.upper()
+text = text2
+
+cats = text.split()
+wordcounter = 0
+numcount = 0
+
+for i in cats:
+ numcount = numcount + 1
+
+output = cats[0]
+
+lfive = ""
+
+for i in range(numcount):
+ l = len(output)
+ lfive = ""
+ for j in range(Size):
+  lfive = lfive + output[(l-Size)+j]
+ for k in cats:
+  meow = re.search(".*" + lfive + "\D", k)
+  if meow != None:
+   purr = re.sub(".*" + lfive, "", k)
+   output = output + purr
+   break
+
+for i in range(numcount):
+ ffive = ""
+ for j in range(Size):
+  ffive = ffive + output[j]
+ for k in cats:
+  meow = re.search("\D" + ffive + ".*", k)
+  if meow != None:
+   purr = re.sub(ffive + ".*", "", k)
+   output = purr + output
+   break
+
+print output

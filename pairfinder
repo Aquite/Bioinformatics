@@ -1,4 +1,4 @@
-file = open("listopairs.aln","r")
+file = open("/share/data/Ecoli-genome/MG1655-K12.fasta","r")
 Sequence = file.readlines()
 betterlist = ""
 truelist = []
@@ -6,6 +6,8 @@ cats = ""
 counter = -1
 inp = raw_input("size of groups: ")
 pNum = int(inp)
+pairinp = raw_input("Smallest allowable Matches: ")
+Pears = int(pairinp)
 
 G = 0
 A = 0
@@ -21,8 +23,6 @@ for i in Sequence:
 
 pCount = 0
 pLine = -1
-
-print betterlist
 
 for i in betterlist:
  pCount = pCount + 1
@@ -46,7 +46,8 @@ for i in range(numcount):
   for j in truelist:
    if j == pair:
     paircounter = paircounter + 1
-  print pair,":",paircounter
+  if paircounter >= Pears:
+   print pair,":",paircounter
   for k in range(paircounter):
    truelist.remove(pair)
 
