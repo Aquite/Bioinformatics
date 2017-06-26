@@ -1,0 +1,46 @@
+file  = open("onecoolcat.aln","r")
+x = file.readlines()
+import re
+cats = ""
+lines = 0
+nlines = 0
+carrotcounter = 0
+codes = []
+names = []
+
+for i in x:
+ if i[0] == ">":
+  if cats != "":
+   codes.append(cats)
+  names.append(i)
+  cats = ""
+ else:
+  cats = cats + i 
+
+codes.append(cats)
+
+for i in codes:
+ lines = lines + 1
+
+for i in range(lines):
+ codes[i] = re.sub("\\n","",codes[i])
+
+for i in names:
+ nlines = nlines + 1
+
+for i in range(nlines):
+ names[i] = re.sub("[\\n\>]","",names[i])
+
+
+gc = 0
+total = 0
+
+for i in range(lines):
+ for j in codes[i]:
+  if j == "G" or j == "C":
+   gc = gc + 1
+  total = total + 1
+ GC = float(gc) * float(100) / float (total)
+ print names[i]; print GC
+ gc = 0
+ total = 0

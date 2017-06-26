@@ -1,0 +1,55 @@
+file  = open ("onecoolcat.aln","r")
+x = file.readlines()
+species = []
+meme = ""
+counter = 0
+linecounter = -1
+carcount = 0
+specounter = -1
+lettercount = -1
+n = -1
+dif = 0
+
+for i in x:
+ linecounter = linecounter +1
+ if x[linecounter][0] == ">":
+  carcount = carcount + 1
+ if carcount == 2:
+  break
+
+for i in x:
+ if counter != 0:
+  meme = meme + i
+ counter = counter + 1
+ if counter == linecounter:
+  species.append(meme)
+  counter = 0
+  meme = ""
+
+for i in species:
+ specounter = specounter + 1
+tempspe = specounter
+
+for i in species[0]:
+ lettercount = lettercount + 1
+
+print species
+
+G = 0
+C = 0
+Total = 0
+
+for i in range(0,specounter+1):
+ for j in species[i]:
+  if j == "C":
+   C = C + 1
+  if j == "G":
+   G = G + 1
+  Total = Total + 1
+ GC = G + C
+ pC = float(GC) / float(Total) * 100
+ print i,pC
+ C = 0
+ G = 0
+ Total = 0
+ pC = 0

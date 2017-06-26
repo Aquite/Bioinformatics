@@ -1,0 +1,84 @@
+import sys
+file = open("catsarecool.pasta","r")
+Sequence = file.readline()
+n = 0
+c = 0
+Q = []
+AA = {}
+AA["UUU"] = "F"
+AA["UUC"] = "F"
+AA["UUA"] = "F"
+AA["UUG"] = "F"
+AA["CUU"] = "L"
+AA["CUC"] = "L"
+AA["CUA"] = "L"
+AA["CUG"] = "L"
+AA["AUU"] = "I"
+AA["AUC"] = "I"
+AA["AUA"] = "I"
+AA["AUG"] = "M"
+AA["GUU"] = "V"
+AA["GUC"] = "V"
+AA["GUA"] = "V"
+AA["GUG"] = "V"
+AA["UCU"] = "S"
+AA["UCC"] = "S"
+AA["UCA"] = "S"
+AA["UCG"] = "S"
+AA["CCU"] = "P"
+AA["CCC"] = "P"
+AA["CCA"] = "P"
+AA["CCG"] = "P"
+AA["ACU"] = "T"
+AA["ACC"] = "T"
+AA["ACA"] = "T"
+AA["ACG"] = "T"
+AA["GCU"] = "A"
+AA["GCC"] = "A"
+AA["GCA"] = "A"
+AA["GCG"] = "A"
+AA["UAU"] = "Y"
+AA["UAC"] = "Y"
+AA["UAA"] = "(Stop Codon)"
+AA["UAG"] = "(Stop Codon)"
+AA["CAU"] = "H"
+AA["CAC"] = "H"
+AA["CAA"] = "Q"
+AA["CAG"] = "Q"
+AA["AAU"] = "N"
+AA["AAC"] = "N"
+AA["AAA"] = "K"
+AA["AAG"] = "K"
+AA["GAU"] = "D"
+AA["GAC"] = "D"
+AA["GAA"] = "E"
+AA["GAG"] = "E"
+AA["UGU"] = "C"
+AA["UGC"] = "C"
+AA["UGA"] = "(Stop Codon)"
+AA["UGG"] = "W"
+AA["CGU"] = "R"
+AA["CGC"] = "R"
+AA["CGA"] = "R"
+AA["CGG"] = "R"
+AA["AGU"] = "S"
+AA["AGC"] = "S"
+AA["AGA"] = "R"
+AA["AGG"] = "R"
+AA["GGU"] = "G"
+AA["GGC"] = "G"
+AA["GGA"] = "G"
+AA["GGG"] = "G"
+for i in Sequence:
+ n = n + 1
+ c = c + 1
+ if n == 2:
+  acid = Sequence[c-2:c+1]
+  for j in AA:
+   if acid == j:
+    Q.append(AA[j])
+  n = -1
+strang = ""
+for coolio in Q:
+ strang = strang + coolio
+print strang
