@@ -1,6 +1,6 @@
-nStr = raw_input("number: ")
+n = 18
 
-n = int(nStr)
+nStr = str(n)
 
 digcount = -1
 
@@ -19,17 +19,16 @@ for i in nStr:
  digcount = digcount + 1
 
 if digcount > 1:
- if int(nStr[digcount-2]) > 0:
+ if nStr[digcount-2] > 0:
   h = "hundred "
 
 if digcount > 2:
- if int(nStr[digcount-3]) > 0:
+ if nStr[digcount-3] > 0:
   th = "thousand "
 
 if digcount > 4:
- if int(nStr[digcount-5]) > 0:
+ if nStr[digcount-5] > 0:
   ht = "hundred "
-  th = "thousand "
 
 HUNTHOU = ""
 TENTHOU = ""
@@ -38,10 +37,13 @@ HUN = ""
 TEN = ""
 ONE = ""
 
+
 if digcount > 4:
  HUNTHOU = ones[int(nStr[digcount - 5])]
 
 
+if digcount > 3:
+ TENTHOU = tens[int(nStr[digcount - 4])]
 
 
 if digcount > 2:
@@ -49,19 +51,12 @@ if digcount > 2:
 if digcount > 1:
  HUN = ones[int(nStr[digcount - 2])]
 
-ONE = ones[int(nStr[digcount])]
 
 if digcount > 0:
  TEN = tens[int(nStr[digcount - 1])]
  if nStr[digcount-1] == "1":
   TEN = teens[int(nStr[digcount])]
-  ONE = ""
 
-if digcount > 3:
- TENTHOU = tens[int(nStr[digcount - 4])]
- if nStr[digcount-4] == "1":
-  TENTHOU = teens[int(nStr[digcount-3])]
-  THOU = ""
 
 cats = ""
 
@@ -71,7 +66,6 @@ cats = HUNTHOU + ht + TENTHOU + THOU + th + HUN + h + TEN + ONE
 if n == 0:
  cats = "zero"
 
-if n == 9001:
- cats = "OVER NINE THOUSAND!!!!"
+
 
 print cats
