@@ -1,0 +1,29 @@
+Seq = "GCACCAGCTGTTTCAGAAGCTCCTG"
+
+lett = {}
+
+lett["G"] = "C"
+lett["C"] = "G"
+lett["T"] = "A"
+lett["A"] = "T"
+
+counter = 0
+symmetrycount = 0
+
+for i in Seq:
+ counter = counter + 1
+
+
+cats = []
+for i in Seq:
+ cats.append(i)
+
+
+for i in range(counter):
+ if cats[i] == lett[cats[counter - i - 1]]:
+  symmetrycount = symmetrycount + 1
+
+if symmetrycount == counter:
+ print "That's a palindrome"
+else:
+ print "No palindromes here!"
