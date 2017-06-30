@@ -1,0 +1,50 @@
+wordinput = raw_input("the word: ")
+
+counter = 0
+cats = ""
+wordlist = []
+
+word0 = wordinput + "$"
+
+for i in word0:
+ counter = counter + 1
+
+cats = word0
+
+#for j in range(counter):
+for i in range(counter):
+ cats = cats[1:] + cats[0]
+ wordlist.append(cats)
+
+RADcat = wordlist
+RADcat.sort()
+
+CoolCat = ""
+
+for i in RADcat:
+ CoolCat = CoolCat + i[counter - 1]
+
+
+print RADcat
+#print CoolCat
+#------------------------------------------
+
+NiceCat = []
+HappyCat = []
+
+CoolCat = raw_input("the word: ")
+
+counter = 0
+
+for i in CoolCat:
+ counter = counter + 1
+
+for i in CoolCat:
+ NiceCat.append(i)
+ HappyCat.append(i)
+
+
+HappyCat.sort()
+
+print NiceCat
+print HappyCat
